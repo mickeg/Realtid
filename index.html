@@ -1,0 +1,74 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="css/flapper.css" type="text/css" rel="stylesheet" />
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery.flapper.js"></script>
+	<script type="text/javascript" src="js/jquery.number.min.js"></script>
+	<script type="text/javascript" src="js/jquery.transform-0.9.3.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+
+</head>
+
+<body>
+<div id="location"></div>
+<div class="header">Min hållplats: Brotorp</div>
+
+	<div id="div_container">
+
+		<div id="div_TrainSouth">
+			<input class="L" id="TrainSouth" />
+		</div>
+
+		<div id="div_TrainSouthTime">
+			<input class="L" id="TrainSouthTime" />
+		</div>
+
+		<div id="div_BusNorth">
+			<input class="L" id="BusNorth" />
+		</div>
+
+		<div id="div_BusNorthTime">
+			<input class="L" id="BusNorthTime" />
+		</div>
+
+		<div id="div_BusSouth">
+			<input class="L" id="BusSouth" />
+		</div>
+
+		<div id="div_BusSouthTime">
+			<input class="L" id="BusSouthTime" />
+		</div>
+
+	</div>
+
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;	
+}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+html {
+	background-color: #FFF;
+}
+
+.header{
+	color: #000;
+	font-family: verdana;
+	height: 50px;
+}
+
+#div_container {
+	background-color: yellow;
+}
+
+#div_TrainSouth {
+	float: left;
+}
+
+#div_TrainSouthTime {
+	float: left;
+}
+
+#div_TrainWest {
+	float: left;
+}
+
+#div_TrainWestTime {
+	float: left;
+}
+
+#div_BusSouth{
+	float: left;
+}
+
+#div_BusSouthTime{
+	float: left;
+}
+
+#div_BusNorth{
+	float: left;
+}
+
+#div_BusNorthTime{
+	float: left;
+}
